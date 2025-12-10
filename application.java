@@ -25,4 +25,11 @@ public class MultiplyTwoNumbers {
         System.out.println("The product is: " + product);
     }
 }
-# end of the code feature-101
+# code changes for feature 102 by ethan on april 2024
+var rpcClient = SolanaRpcClient.build()
+    .testResponse((_, body) -> {
+        final var json = new String(body);
+        System.out.println(json); // The JSON string can be written to a file if large
+        return true;
+    })
+    .createClient();
